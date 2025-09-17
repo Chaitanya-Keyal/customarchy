@@ -1,23 +1,25 @@
 #!/bin/bash
 
-# Get remote tag
-latest_tag=$(git -C "$OMARCHY_PATH" ls-remote --tags origin | grep -v "{}" | awk '{print $2}' | sed 's#refs/tags/##' | sort -V | tail -n 1)
-if [[ -z "$latest_tag" ]]; then
-  echo "Error: Could not retrieve latest tag."
+REF="$(omarchy-version-branch)"
+
+# Get remote SHA for the current branch
+remote_sha=$(git -C "$OMARCHY_PATH" ls-remote origin "refs/heads/$REF" | awk '{print $1}')
+if [[ -z "$remote_sha" ]]; then
+  echo "Error: Could not retrieve remote SHA for $REF."
   exit 1
 fi
 
-# Get local tag
-current_tag=$(git -C "$OMARCHY_PATH" describe --tags $(git -C "$OMARCHY_PATH" rev-list --tags --max-count=1))
-if [[ -z "$current_tag" ]]; then
-  echo "Error: Could not retrieve current tag."
+# Get local SHA for the current branch
+local_sha=$(git -C "$OMARCHY_PATH" rev-parse "$REF" 2>/dev/null)
+if [[ -z "$local_sha" ]]; then
+  echo "Error: Could not resolve local HEAD."
   exit 1
 fi
 
-if [[ "$current_tag" != "$latest_tag" ]]; then
-  echo "Omarchy update available ($latest_tag)"
+if [[ "$local_sha" != "$remote_sha" ]]; then
+  echo "Omarchy update available ($local_sha -> $remote_sha on $REF)"
   exit 0
 else
-  echo "Omarchy is up to date ($current_tag)"
+  echo "Omarchy is up to date ($REF)"
   exit 1
 fi

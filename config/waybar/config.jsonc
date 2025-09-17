@@ -42,13 +42,13 @@
     "format": "<span font='omarchy'>\ue900</span>",
     "on-click": "omarchy-menu",
     "on-click-right": "omarchy-launch-terminal",
-    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+    "tooltip-format": "Menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
     "format": "",
     "exec": "omarchy-update-available",
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
-    "tooltip-format": "Omarchy update available",
+    "tooltip-format": "Update available",
     "signal": 7,
     "interval": 3600
   },

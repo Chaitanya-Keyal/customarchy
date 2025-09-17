@@ -12,10 +12,13 @@
   },
   "modules": [
     "break",
+    "break",
     {
-      "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+      "type": "title",
+      "keyWidth": 10
     },
+    "separator",
+    "break",
     {
       "type": "host",
       "key": " PC",
@@ -54,25 +57,15 @@
       "keyColor": "green"
     },
     {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-    },
-    "break",
-    {
-      "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
-    },
-    {
-      "type": "command",
+      "type": "os",
       "key": "\ue900 OS",
-      "keyColor": "blue",
-      "text": "version=$(omarchy-version); echo \"Omarchy $version\""
+      "keyColor": "blue"
     },
     {
       "type": "command",
       "key": "│ ├󰘬",
       "keyColor": "blue",
-      "text": "branch=$(omarchy-version-branch); echo \"$branch\""
+      "text": "branch=$(omarchy-version-branch); echo \"Omarchy ($branch)\""
     },
     {
       "type": "kernel",
@@ -111,20 +104,6 @@
       "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38m●\\e[37m●\\e[36m●\\e[35m●\\e[34m●\\e[33m●\\e[32m●\\e[31m●\""
     },
     {
-      "type": "terminalfont",
-      "key": "└ └",
-      "keyColor": "blue"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-    },
-    "break",
-    {
-      "type": "custom",
-      "format": "\u001b[90m┌────────────────────Uptime / Age────────────────────┐"
-    },
-    {
       "type": "command",
       "key": "󱦟 OS Age",
       "keyColor": "magenta",
@@ -134,10 +113,6 @@
       "type": "uptime",
       "key": "󱫐 Uptime",
       "keyColor": "magenta"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
     },
     "break"
   ]

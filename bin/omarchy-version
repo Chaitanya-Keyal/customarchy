@@ -1,2 +1,3 @@
 #!/bin/bash
-cat $OMARCHY_PATH/version
+
+git -C "$OMARCHY_PATH" rev-parse HEAD

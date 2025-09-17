@@ -3,9 +3,9 @@
 # Lock the screen
 pidof hyprlock || hyprlock &
 
-# Ensure 1password is locked
-if pgrep -x "1password" >/dev/null; then
-  1password --lock &
+# Lock Bitwarden if available (no-op if not logged in)
+if command -v bw >/dev/null 2>&1; then
+  bw lock >/dev/null 2>&1 &
 fi
 
 # Avoid running screensaver when locked

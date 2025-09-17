@@ -1,8 +1,8 @@
 # Omarchy core package list installed via install/packages.sh
 # This file is also used by the ISO builder when determining needs
 
-1password-beta
-1password-cli
+bitwarden
+bitwarden-cli
 alacritty
 asdcontrol-git
 avahi
@@ -51,7 +51,6 @@ imv
 inetutils
 iwd
 jq
-kdenlive
 kvantum-qt5
 lazydocker
 lazygit
@@ -66,7 +65,8 @@ mako
 man
 mariadb-libs
 mise
-mpv
+visual-studio-code-bin
+vlc
 nautilus
 noto-fonts
 noto-fonts-cjk
@@ -74,7 +74,6 @@ noto-fonts-emoji
 noto-fonts-extra
 nss-mdns
 nvim
-obs-studio
 obsidian
 omarchy-chromium
 omarchy-lazyvim
@@ -92,7 +91,6 @@ python-terminaltexteffects
 qt5-wayland
 ripgrep
 satty
-signal-desktop
 slurp
 spotify
 starship
@@ -105,7 +103,6 @@ tree-sitter-cli
 ttf-cascadia-mono-nerd
 ttf-ia-writer
 ttf-jetbrains-mono-nerd
-typora
 tzupdate
 ufw
 ufw-docker
@@ -125,7 +122,6 @@ woff2-font-awesome
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xmlstarlet
-xournalpp
 yaru-icon-theme
 yay
 zoxide

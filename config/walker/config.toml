@@ -43,6 +43,11 @@ url = "https://github.com/basecamp/omarchy"
 keywords = ["omarchy", "github"]
 
 [[builtins.bookmarks.entries]]
+label = "customarchy - Github"
+url = "https://github.com/Chaitanya-Keyal/customarchy"
+keywords = ["customarchy", "github"]
+
+[[builtins.bookmarks.entries]]
 label = "Omarchy Manual"
 url = "https://manuals.omamix.org/2/the-omarchy-manual"
 keywords = ["omarchy"]
